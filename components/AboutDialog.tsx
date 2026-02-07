@@ -52,50 +52,38 @@ const AboutDialog: React.FC<AboutDialogProps> = ({ isOpen, onClose }) => {
 
                     {/* Title & Version */}
                     <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-white via-white to-white/60 tracking-tight mb-1">
-                        Aura Music
+                        Tinkle Music
                     </h3>
                     <div className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-white/5 border border-white/5 text-[11px] font-medium text-white/40 tracking-wide uppercase mb-6">
-                        v1.4.0 • Web
+                        v1.0.0 • Web
                     </div>
 
                     {/* Description */}
                     <p className="text-white/70 text-[15px] leading-relaxed mb-8 font-medium">
-                        An experimental, pure web music player crafted with
+                        A magical box that plays music so
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 font-bold mx-1">
-                            Vibe Coding
+                            YOU
                         </span>
-                        technology.
+                        don't have to sit in awkward silence while playing Tinkle Games.
                     </p>
 
                     {/* Tech Stack Grid */}
                     <div className="w-full grid grid-cols-3 gap-2 mb-8">
-                        <TechBadge label="Gemini 3" />
-                        <TechBadge label="Codex" />
-                        <TechBadge label="Claude" />
+                        <TechBadge label="Tinkle" />
+                        <TechBadge label="Party" />
+                        <TechBadge label="Games" />
                     </div>
 
                     {/* Selection List */}
                     <div className="w-full flex flex-col gap-2 mb-6">
                         <a
-                            href="https://github.com/dingyi222666/aura-music"
+                            href="https://historystudyguide.github.io"
                             target="_blank"
                             rel="noreferrer"
                             onClick={(e) => e.stopPropagation()}
                             className="flex items-center justify-between px-4 py-3 rounded-2xl border border-white/15 bg-white/5 text-sm font-medium text-white/80 hover:bg-white/10 transition"
                         >
-                            <span>View on GitHub</span>
-                            <span className="text-[11px] text-white/50">↗</span>
-                        </a>
-
-                        <a
-                            href="https://github.com/dingyi222666"
-                            target="_blank"
-                            rel="noreferrer"
-                            onClick={(e) => e.stopPropagation()}
-                            className="flex items-center justify-between px-4 py-3 rounded-2xl border border-white/15 bg-white/5 text-sm font-medium text-white/80 hover:bg-white/10 transition"
-                        >
-                            <span>Created by dingyi222666</span>
-                            <span className="text-[11px] text-white/50">↗</span>
+                            <span>Go to Site</span>
                         </a>
                     </div>
                 </div>
