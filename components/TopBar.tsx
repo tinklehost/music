@@ -112,7 +112,7 @@ const TopBar: React.FC<TopBarProps> = ({
             <AuraLogo className="w-full h-full" />
           </div>
           <h1 className="text-white/90 font-bold tracking-wider text-sm uppercase hidden sm:block drop-shadow-md">
-            Aura Music
+            Tinkle Music
           </h1>
         </div>
 
@@ -143,7 +143,7 @@ const TopBar: React.FC<TopBarProps> = ({
           <button
             onClick={() => setIsAboutOpen(true)}
             className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center text-white/80 hover:bg-white/20 hover:text-white transition-all shadow-sm"
-            title="About Aura Music"
+            title="About Tinkle Music"
           >
             <InfoIcon className="w-5 h-5" />
           </button>
