@@ -60,11 +60,11 @@ const AboutDialog: React.FC<AboutDialogProps> = ({ isOpen, onClose }) => {
 
                     {/* Description */}
                     <p className="text-white/70 text-[15px] leading-relaxed mb-8 font-medium">
-                        A magical box that plays music so
+                        A magical box that plays music so you don't have to sit in awkward silence while playing
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 font-bold mx-1">
-                            YOU
+                            Tinkle Games
                         </span>
-                        don't have to sit in awkward silence while playing Tinkle Games.
+                        .
                     </p>
 
                     {/* Tech Stack Grid */}
