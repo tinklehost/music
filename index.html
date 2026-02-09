@@ -18,6 +18,12 @@
         />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
+        
+        <!-- Load React and Babel for JSX compilation -->
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        
         <style>
             body {
                 font-family: "PingFang SC", "Inter", sans-serif;
@@ -86,6 +92,39 @@
     </head>
     <body>
         <div id="root"></div>
-        <script type="module" src="index.js"></script>
+        
+        <!-- Your main React app compiled by Babel -->
+        <script type="text/babel">
+            // Import React and ReactDOM from global scope (loaded via CDN)
+            const { useState, useEffect, useRef } = React;
+            const ReactDOM = window.ReactDOM;
+            
+            // Define App component (replace this with your actual App component)
+            function App() {
+                return React.createElement('div', { 
+                    className: 'min-h-screen bg-black text-white flex items-center justify-center'
+                }, 'Tinkle Party Music - Loading...');
+            }
+            
+            // ToastProvider component (simplified version)
+            function ToastProvider({ children }) {
+                return React.createElement('div', null, children);
+            }
+            
+            // Main render
+            const rootElement = document.getElementById('root');
+            if (!rootElement) {
+                throw new Error("Could not find root element to mount to");
+            }
+            
+            const root = ReactDOM.createRoot(rootElement);
+            root.render(
+                React.createElement(React.StrictMode, null,
+                    React.createElement(ToastProvider, null,
+                        React.createElement(App, null)
+                    )
+                )
+            );
+        </script>
     </body>
 </html>
