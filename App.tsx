@@ -245,7 +245,7 @@ const App: React.FC = () => {
           currentTime={currentTime}
           duration={duration}
           onSeek={handleSeek}
-          title={currentSong?.title || "Welcome to Aura"}
+          title={currentSong?.title || "Welcome to Tinkle Music"}
           artist={currentSong?.artist || "Select a song"}
           audioRef={audioRef}
           onNext={playNext}
