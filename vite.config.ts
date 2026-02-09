@@ -4,8 +4,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
-  // Always use /music/ for production build
-  const productionBase = '/music/';
+  const productionBase = env.VITE_BASE_PATH || '/music/';
   return {
     base: mode === 'production' ? productionBase : '/',
     server: {
@@ -20,18 +19,6 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
-      },
-    },
-    build: {
-      outDir: 'dist',
-      sourcemap: false, // Disable sourcemaps for smaller bundle
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            vendor: ['react', 'react-dom'],
-            utils: ['@react-spring/web'],
-          },
-        },
       },
     },
   };
